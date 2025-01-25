@@ -1,25 +1,12 @@
-const { Sequelize, DataTypes } = require('sequelize');
 const sequelize = require('./database');
+const Usuario = require('./usuario');
 
-const Usuario = sequelize.define('Usuario', {
-  nome: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-  email: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-  idade: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-  },
-  telefone: {
-    type: DataTypes.STRING, // Inclua essa coluna somente se for realmente necessária
-    allowNull: true,
-  },
-}, {
-  timestamps: true, // Garante que `createdAt` e `updatedAt` sejam gerados automaticamente
-});
-
-module.exports = Usuario;
+async function sincronizarBanco() {
+  try {
+    await sequelize.sync({ force: true });
+    console.log('Banco sincronizado com sucesso!');
+  } catch (error) {
+    console.log('Erro ao sincronizar o banco:', error); 
+  }
+}
+module.exports = { sincronizarBanco }
