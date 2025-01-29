@@ -1,0 +1,17 @@
+{
+
+    "header": {
+    "alg": "HS256",
+    "typ": "JWT"
+    },
+
+    "payload":{
+    "id" : 123,
+    "username": "Felippe",
+    "role": "admin",
+    "exp" : 1672546000
+    }
+
+    
+
+}
