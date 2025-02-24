@@ -1,6 +1,6 @@
 //!Aula 1- variaveis
 // ? oque sao variaveis
-let nome = "Felippe";
+let nome = "Felipe";
 let cidade = "São Paulo"
 
 console.log("Olá, meu nome é ",nome, "e eu moro em", cidade);
