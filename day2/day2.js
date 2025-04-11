@@ -36,9 +36,6 @@ switch (diaDaSemana) {
     case 7 :
         console.log("domingo");
         break;
-      case 8 :
-        console.log("teste");
-
     default:
         console.log("dia inválido");
         break;
